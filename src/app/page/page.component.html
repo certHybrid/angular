@@ -1,0 +1,45 @@
+<p>page works!</p>
+
+<div *ngIf="isLogin">
+    <h1>Sign in</h1>
+</div>
+<div *ngIf="!isLogin">
+    <h1>Register</h1>
+</div>
+<button (click)="toggleForm()">
+<span *ngIf="isLogin">Login</span>
+<span *ngIf="!isLogin">Register</span>
+</button>
+<table>
+    <thead>
+        <th>NAMES</th>
+    </thead>
+        <tr *ngFor="let stud of students; let i = index">
+            <td>{{i+1}}</td><td>{{stud}}</td>
+        </tr>
+    </table>
+
+    <div>
+        <h1>Today is {{checkDate()}}</h1>
+        <h1>Today is {{date.getDate()}}</h1>
+        <h1>Today is {{date.toLocaleDateString()}}</h1>
+    </div>
+
+    <!-- DIRECTIVES -->
+    
+
+    <!-- assignment...
+    1. use ngswitch renger thr arrobj on screen
+    , the one with qualify shoild have bg color of green and qaulify should have red
+    2. translate numbers from the getdate to days in the week -->
+
+    <!-- WILDCARD ROUTING = create a not found route
+    DYNAMIC ROUTING == use a component to display diffeerent information
+    
+    LAYOUTS
+    SERVICES
+    ROUTES GUARDS || AUTH GUARDS
+    httpClient
+    Angular Materials
+    Pipes
+    -->

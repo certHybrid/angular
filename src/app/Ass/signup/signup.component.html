@@ -1,0 +1,28 @@
+<div class="w-50 mx-auto p-3 rounded shadow">
+    <div class="form-group my-2">
+        <label for="">Username</label>
+        <input type="text" class="form-control" [(ngModel)]="username">
+    </div>
+    <div class="form-group my-2">
+        <label for="">Email</label>
+        <input type="email" class="form-control" [(ngModel)]="email">
+    </div>
+    <div class="form-group my-2">
+        <label for="">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="password">
+    </div>
+    <div class="form-group my-2">
+        <label for="">Confirm Password</label>
+        <input type="password" class="form-control" [(ngModel)]="confirmpass">
+    </div>
+    <div class="form-group my-2">
+        <input type="file" class="form-control" (change)="uploadedIMG($event)" id="profilepic" accept="image/*">
+        <span *ngIf="profilepic"><img [src]="profilepic" alt="profile image" width="100px" height="70px"></span>
+    </div>
+    <div class="text center">
+        <button class="btn btn-primary py-3 w-100" (click)="signup()">Signup</button>
+    </div>
+    
+
+
+</div>
