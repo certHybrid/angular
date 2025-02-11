@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { authGuard } from './auth.guard';
 import { AdminLayoutComponent } from './Layout/admin-layout/admin-layout.component';
 import { SignupComponent } from './Ass/signup/signup.component';
+import { ListComponent } from './list/list.component';
 
 export const routes: Routes = [
     {path: "profile", component: ProfileComponent, canActivate:[authGuard]},
@@ -17,5 +18,6 @@ export const routes: Routes = [
     {path: "view/:id", component:ViewComponent},
     {path: "login", component:LoginComponent},
     {path: "dashbaord", component:DashboardComponent},
-    {path: "signup", component:SignupComponent}
+    {path: "signup", component:SignupComponent},
+    {path: "list", component:ListComponent}
 ];
