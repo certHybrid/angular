@@ -1,5 +1,13 @@
-<h1>Select a country</h1>
-    <select name="" id="" >
+<!-- <h1>Select a country</h1> -->
+    <!-- <select name="" id="" >
         <option value=""*ngFor="let country of countries">{{country}}</option>
-    </select>
+    </select> -->
+
+        <div class="card" style="width: 100rem;" *ngFor="let person of files">
+            <div class="card-body">
+              <h3 class="card-title">{{person.id}}</h3>
+              <h6 class="card-subtitle mb-2 text-body-secondary">ID: {{person.userId}}</h6>
+              <p class="card-text">{{person.body}}</p>
+            </div>
+        </div>
 
