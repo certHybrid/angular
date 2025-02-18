@@ -2,12 +2,20 @@
     <!-- <select name="" id="" >
         <option value=""*ngFor="let country of countries">{{country}}</option>
     </select> -->
+<h1 class="text-black-900">All POST</h1>
+<h2 *ngIf="loading">Fetching Post.....</h2>
+        <div class="card" style="width: 80rem;" *ngFor="let person of files, let i=index">
+            <a routerLink="{{'/view/'+person.id}}" class="text-decoration-none">
+                <div class="card-body">
+                    <h4 class="card-title">SN: {{person.id}}</h4>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">CATEGORY: {{person.userId}}</h6>
+                    <span class="card-text">{{this.showFullText[i]? person.body: (person.body | slice: 0:30)}}</span>
+                    <span *ngIf="!this.showFullText[i]">...</span>
+                  </div>
+            </a>
+            <button class="btn btn-primary" (click)="showmore(i)" type="button" style="width: 10rem;;">
+                <span *ngIf="this.showFullText[i]">Show less</span> <span *ngIf="!this.showFullText[i]">Show more</span>
+            </button>
 
-        <div class="card" style="width: 100rem;" *ngFor="let person of files">
-            <div class="card-body">
-              <h3 class="card-title">{{person.id}}</h3>
-              <h6 class="card-subtitle mb-2 text-body-secondary">ID: {{person.userId}}</h6>
-              <p class="card-text">{{person.body}}</p>
-            </div>
+            
         </div>
-

@@ -17,7 +17,7 @@
         <td>{{user.email}}</td>
         <td>
             <button (click)="delUser(i)">Delete</button>
-            <button (click)="editUser(i)">Edit</button>
+            <button (click)="editUser(i)" class="bg-yellow-500 mx-2 px-4 text-white rounded-lg my-2 hover:bg-red-500 duration-300 ease-in">Edit</button>
             <button (click)="view(i)" type="button">view</button>
             <a routerLink="/view/{{i}}">view with link</a>
         </td>
